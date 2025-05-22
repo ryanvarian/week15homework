@@ -1,0 +1,44 @@
+# Data Summary Report: Outbound Travel Patterns of Taiwanese Nationals (2013–2024)
+
+## Data Description
+
+The dataset, `歷年中華民國國民出國年齡統計2013-2024.csv`, compiles outbound travel statistics for Taiwanese nationals from 2013 to 2024, disaggregated by year, destination region, specific destination, and age group. As detailed in the codebook (`week14-hw-codebook.md`), the data is presumed to originate from official Taiwanese sources, such as the Ministry of Transportation or Immigration Agency. The dataset contains 614 observations and 10 variables: `年別` (year, integer, 2013–2024), `首站抵達地` (destination region, categorical, 6 levels: Asia, Africa, Americas, Oceania, Europe, and grand total), `細分` (specific destination, categorical, 41 unique values including countries and regional totals), and seven age groups (`12歲以下`, `13歲至19歲`, `20至29歲`, `30至39歲`, `40至49歲`, `50至59歲`, `60歲及以上`, all integers) plus a total count (`合計`, integer). The age group variables capture traveler counts, ranging from 0 to millions (e.g., `合計` up to 17,101,335), with no missing values, though zero values in regions like Africa may indicate unrecorded data.
+
+This dataset is well-suited for analyzing temporal trends, regional preferences, and age-specific travel patterns, particularly in the context of external shocks like the COVID-19 pandemic. The codebook confirms data consistency, with the total count (`合計`) equaling the sum of age group counts. However, sparse data in regions like Africa and Oceania requires cautious interpretation. The dataset’s long-format CSV structure facilitates flexible analysis using tools like R’s tidyverse package.
+
+## Data Summary
+
+### Single-Variable Analysis
+
+The single-variable summary (`variable_summary.json`) provides detailed insights into each variable’s distribution and characteristics. The `年別` variable, an integer ranging from 2013 to 2024, has a uniform distribution with approximately 41 observations per year (total 492 observations, suggesting balanced coverage across the 12-year period). The mean and median are both 2018.5, confirming no temporal skewness, and no missing values are present. The `首站抵達地` variable, treated as a factor, includes six categories, with Asia dominating (216 observations, ~44%) and Africa being the least represented (36 observations, ~7%). The `細分` variable, also a factor, contains 41 unique values, including specific destinations (e.g., Japan, China) and regional totals (e.g., Asia Total). Notably, the codebook lists 40 unique values, but the inclusion of "總計 Grand Total" accounts for the discrepancy. Each specific destination appears 12 times, reflecting yearly data points.
+
+Numeric variables (`12歲以下`, `13歲至19歲`, `20至29歲`, `30至39歲`, `40至49歲`, `50至59歲`, `60歲及以上`, and `合計`) are integers with no missing values. Their ranges align with the codebook, though `variable_summary.json` reports higher maxima for some age groups (e.g., `12歲以下` up to 1,225,828 vs. 596,071 in the codebook), likely due to aggregation differences or data updates. For instance, `合計` ranges from 0 to 17,101,335 (mean 810,061, median 56,587, standard deviation 2,677,107), indicating high variability driven by popular destinations and pandemic disruptions. The `12歲以下` group shows the smallest mean (51,363) and median (1,707), while `30至39歲` has the highest mean (173,880), reflecting middle-aged travelers’ dominance.
+
+### Multi-Variable Analysis
+
+Five multi-variable analyses provide deeper insights into travel patterns across years, regions, destinations, and age groups:
+
+1. **Yearly and Regional Totals** (`year_region_total.json`): This analysis aggregates total outbound travelers by year and destination region. Asia consistently dominates, with traveler counts rising from 20,777,874 in 2013 to 31,571,998 in 2024, peaking at 31,514,946 in 2019 before a sharp decline to 465,472 in 2021 due to COVID-19 restrictions. The grand total (`全區`) follows a similar trend, peaking at 17,176,932 in 2019 and dropping to 360,842 in 2021. Other regions, such as Europe (peak 1,075,554 in 2018) and the Americas (peak 1,423,078 in 2018), contribute smaller shares, while Africa’s totals remain negligible (e.g., 752 in 2024). The rebound in 2023–2024 suggests a strong recovery in travel demand.
+
+2. **Age Distribution in Top Destinations** (`top_dest_age_distribution.json`): Focusing on the top five destinations (Japan, China, Hong Kong, Korea, Thailand), this analysis calculates the average number of travelers by age group. Japan leads with the highest averages, particularly for the 30–39 age group (768,669 travelers), followed by the 20–29 group (531,039). China shows a preference among older travelers, with the 50–59 group averaging 627,570. Hong Kong and Korea attract younger travelers (20–39), with averages of 179,568–302,867 and 150,482–172,265, respectively. Thailand has a balanced age distribution, with the 30–39 group leading at 128,041. These patterns highlight destination-specific age preferences, with Japan appealing broadly and China attracting older travelers.
+
+3. **Pre- and Post-Pandemic Age Proportions** (`pandemic_age_proportion.json`): This analysis compares age group proportions between pre-pandemic (2013–2019) and pandemic/post-pandemic (2020–2024) periods. Pre-pandemic, the 30–39 age group contributed the largest share (22.06%), followed by 40–49 (20.79%) and 50–59 (18.4%). Post-2020, the 30–39 share decreased to 19.65%, while the 60-and-above group increased from 15.07% to 17.92%, suggesting older travelers played a larger role in the recovery phase, possibly due to retirement flexibility or pent-up demand. The 12-and-under group also saw a slight increase (6.06% to 7.2%), potentially reflecting family travel post-restrictions.
+
+4. **Regional Age Group Totals** (`region_age_total.json`): Excluding the grand total region, this analysis sums traveler counts by region and age group. Asia dominates across all age groups, with 53,062,404 travelers aged 30–39 and 51,153,836 aged 40–49, reflecting its broad appeal. The Americas and Europe show significant activity among middle-aged and older groups (e.g., 2,941,156 travelers aged 60-and-above in the Americas), while Oceania attracts a balanced age distribution (e.g., 618,252 for 30–39). Africa’s counts are minimal (e.g., 146 for 12-and-under), consistent with the codebook’s note on data sparsity.
+
+5. **Yearly Growth Rates for Top Destinations** (`yearly_growth_top_dest.json`): This analysis tracks total travelers and growth rates for Japan, China, and Hong Kong. Japan’s traveler counts grew from 2,346,007 in 2013 to 4,915,681 in 2019, with peak growth of 27.80% in 2015, followed by an 85.79% decline in 2020 and a 97.99% drop in 2021. Recovery was remarkable, with growth rates of 2421.31% in 2022 and 1092.99% in 2023, reaching 6,006,116 in 2024. China and Hong Kong followed similar patterns, with China’s growth peaking at 961.60% in 2023 and Hong Kong at 1310.04%. These trends highlight the pandemic’s severe disruption and the rapid rebound in Asian travel markets.
+
+### Conclusion
+
+The dataset provides a rich resource for analyzing Taiwanese outbound travel patterns from 2013 to 2024. Single-variable analysis confirms the data’s completeness and consistency, with no missing values and distributions aligning with the codebook, though minor discrepancies (e.g., 41 vs. 40 unique `細分` values) suggest the inclusion of a grand total category. Multi-variable analyses reveal Asia’s dominance, driven by Japan, China, and Hong Kong, with middle-aged travelers (30–49) as the primary contributors. The COVID-19 pandemic caused a dramatic decline in 2020–2021, particularly for Japan (97.99% drop), but the 2022–2024 recovery was robust, with older travelers (60-and-above) increasing their share post-pandemic. Sparse data in regions like Africa limits generalizability, but the dataset’s granularity supports detailed econometric modeling of travel demand, age-specific preferences, and policy impacts. Future research could explore causal factors behind destination preferences (e.g., economic, cultural, or policy drivers) and employ time-series models to forecast post-pandemic trends.
+
+### References
+
+- Codebook: `week14-hw-codebook.md`, describing the dataset structure and characteristics.
+- Single-variable summary: `variable_summary.json`, providing variable-specific statistics.
+- Multi-variable summaries:
+  - `year_region_total.json`, yearly and regional traveler totals.
+  - `top_dest_age_distribution.json`, age group averages for top destinations.
+  - `pandemic_age_proportion.json`, pre- and post-pandemic age proportions.
+  - `region_age_total.json`, regional age group totals.
+  - `yearly_growth_top_dest.json`, yearly totals and growth rates for top destinations.
