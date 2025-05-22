@@ -1,0 +1,184 @@
+{
+  "description": "Summary of each variable in the dataset 歷年中華民國國民出國年齡統計2013-2024.csv by its class, including missing value counts",
+  "operations": "dplyr::summarise, dplyr::count, dplyr::across, base::summary, base::table",
+  "summary": {
+    "年別": {
+      "class": "integer",
+      "summary": {
+        "min": 2013,
+        "max": 2024,
+        "mean": 2018.5,
+        "median": 2018.5,
+        "unique_values": 12,
+        "frequency_table": {
+          "2013": 41,
+          "2014": 41,
+          "2015": 41,
+          "2016": 41,
+          "2017": 41,
+          "2018": 41,
+          "2019": 41,
+          "2020": 41,
+          "2021": 41,
+          "2022": 41,
+          "2023": 41,
+          "2024": 41
+        },
+        "missing_values": 0
+      }
+    },
+    "首站抵達地": {
+      "class": "factor",
+      "summary": {
+        "unique_values": 6,
+        "frequency_table": {
+          "亞洲地區": 216,
+          "全區": 24,
+          "大洋洲地區": 60,
+          "歐洲地區": 108,
+          "美洲地區": 48,
+          "非洲地區": 36
+        },
+        "missing_values": 0
+      }
+    },
+    "細分": {
+      "class": "factor",
+      "summary": {
+        "unique_values": 41,
+        "frequency_table": {
+          "中國大陸 China": 12,
+          "亞洲其他 Others": 12,
+          "亞洲合計 Total": 12,
+          "其他 Others": 12,
+          "加拿大 Canada": 12,
+          "南非 S. Africa": 12,
+          "印尼 Indonesia": 12,
+          "土耳其 Turkey": 12,
+          "大洋洲其他 Others": 12,
+          "大洋洲合計 Total": 12,
+          "奧地利 Austria": 12,
+          "帛琉 Palau": 12,
+          "德國 Germany": 12,
+          "新加坡 Singapore": 12,
+          "日本 Japan": 12,
+          "柬埔寨 Cambodia": 12,
+          "歐洲其他 Others": 12,
+          "歐洲合計 Total": 12,
+          "汶萊 Brunei": 12,
+          "法國 France": 12,
+          "泰國 Thailand": 12,
+          "澳洲 Australia": 12,
+          "澳門 Macao": 12,
+          "瑞士 Switzerland": 12,
+          "紐西蘭 New Zealand": 12,
+          "緬甸 Myanmar": 12,
+          "總計 Grand Total": 12,
+          "美國 USA": 12,
+          "美洲其他 Others": 12,
+          "美洲合計 Total": 12,
+          "義大利 Italy": 12,
+          "英國 U.K.": 12,
+          "荷蘭 Netherlands": 12,
+          "菲律賓 Philippines": 12,
+          "越南 Vietnam": 12,
+          "阿拉伯聯合大公國 UAE": 12,
+          "非洲其他 Others": 12,
+          "非洲合計 Total": 12,
+          "韓國 Korea": 12,
+          "香港 Hong Kong": 12,
+          "馬來西亞 Malaysia": 12
+        },
+        "missing_values": 0
+      }
+    },
+    "12歲以下": {
+      "class": "integer",
+      "summary": {
+        "min": 0,
+        "max": 1225828,
+        "mean": 51362.7033,
+        "median": 1707,
+        "sd": 176301.2462,
+        "missing_values": 0
+      }
+    },
+    "13歲至19歲": {
+      "class": "integer",
+      "summary": {
+        "min": 0,
+        "max": 681622,
+        "mean": 30197.9837,
+        "median": 1810,
+        "sd": 99622.6774,
+        "missing_values": 0
+      }
+    },
+    "20至29歲": {
+      "class": "integer",
+      "summary": {
+        "min": 0,
+        "max": 2407471,
+        "mean": 113920.3821,
+        "median": 7507,
+        "sd": 375836.6551,
+        "missing_values": 0
+      }
+    },
+    "30至39歲": {
+      "class": "integer",
+      "summary": {
+        "min": 0,
+        "max": 3486372,
+        "mean": 173880.1382,
+        "median": 11725,
+        "sd": 574736.9574,
+        "missing_values": 0
+      }
+    },
+    "40至49歲": {
+      "class": "integer",
+      "summary": {
+        "min": 0,
+        "max": 3534806,
+        "mean": 167199.7785,
+        "median": 10513,
+        "sd": 555016.4114,
+        "missing_values": 0
+      }
+    },
+    "50至59歲": {
+      "class": "integer",
+      "summary": {
+        "min": 0,
+        "max": 3099484,
+        "mean": 145724.9309,
+        "median": 10681.5,
+        "sd": 482748.2022,
+        "missing_values": 0
+      }
+    },
+    "60歲及以上": {
+      "class": "integer",
+      "summary": {
+        "min": 0,
+        "max": 3173197,
+        "mean": 127775.3699,
+        "median": 9155.5,
+        "sd": 425860.3133,
+        "missing_values": 0
+      }
+    },
+    "合計": {
+      "class": "integer",
+      "summary": {
+        "min": 0,
+        "max": 17101335,
+        "mean": 810061.2866,
+        "median": 56587,
+        "sd": 2677107.3895,
+        "missing_values": 0
+      }
+    }
+  }
+}

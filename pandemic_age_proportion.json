@@ -1,0 +1,26 @@
+{
+  "description": "Proportion of outbound travelers by age group for pre-pandemic (2013-2019) vs. pandemic & post (2020-2024)",
+  "operations": "dplyr::mutate, dplyr::group_by, dplyr::summarise, dplyr::across",
+  "summary": [
+    {
+      "period": "Pandemic & Post",
+      "12歲以下": 0.072,
+      "13歲至19歲": 0.0401,
+      "20至29歲": 0.1431,
+      "30至39歲": 0.1965,
+      "40至49歲": 0.2018,
+      "50至59歲": 0.1673,
+      "60歲及以上": 0.1792
+    },
+    {
+      "period": "Pre-Pandemic",
+      "12歲以下": 0.0606,
+      "13歲至19歲": 0.0364,
+      "20至29歲": 0.1398,
+      "30至39歲": 0.2206,
+      "40至49歲": 0.2079,
+      "50至59歲": 0.184,
+      "60歲及以上": 0.1507
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "description": "Yearly total outbound travelers and growth rate for Japan, China, and Hong Kong",
+  "operations": "dplyr::filter, dplyr::group_by, dplyr::summarise, dplyr::arrange, dplyr::mutate, dplyr::lag, tidyr::pivot_wider",
+  "summary": [
+    {
+      "年別": 2013,
+      "total_中國大陸 China": 3072327,
+      "total_日本 Japan": 2346007,
+      "total_香港 Hong Kong": 2038732
+    },
+    {
+      "年別": 2014,
+      "total_中國大陸 China": 3267238,
+      "total_日本 Japan": 2971846,
+      "total_香港 Hong Kong": 2018129,
+      "growth_rate_中國大陸 China": 6.3441,
+      "growth_rate_日本 Japan": 26.6768,
+      "growth_rate_香港 Hong Kong": -1.0106
+    },
+    {
+      "年別": 2015,
+      "total_中國大陸 China": 3403920,
+      "total_日本 Japan": 3797879,
+      "total_香港 Hong Kong": 2008153,
+      "growth_rate_中國大陸 China": 4.1834,
+      "growth_rate_日本 Japan": 27.7953,
+      "growth_rate_香港 Hong Kong": -0.4943
+    },
+    {
+      "年別": 2016,
+      "total_中國大陸 China": 3685477,
+      "total_日本 Japan": 4295240,
+      "total_香港 Hong Kong": 1902647,
+      "growth_rate_中國大陸 China": 8.2716,
+      "growth_rate_日本 Japan": 13.0958,
+      "growth_rate_香港 Hong Kong": -5.2539
+    },
+    {
+      "年別": 2017,
+      "total_中國大陸 China": 3928352,
+      "total_日本 Japan": 4615873,
+      "total_香港 Hong Kong": 1773252,
+      "growth_rate_中國大陸 China": 6.5901,
+      "growth_rate_日本 Japan": 7.4648,
+      "growth_rate_香港 Hong Kong": -6.8008
+    },
+    {
+      "年別": 2018,
+      "total_中國大陸 China": 4172704,
+      "total_日本 Japan": 4825948,
+      "total_香港 Hong Kong": 1696265,
+      "growth_rate_中國大陸 China": 6.2202,
+      "growth_rate_日本 Japan": 4.5511,
+      "growth_rate_香港 Hong Kong": -4.3416
+    },
+    {
+      "年別": 2019,
+      "total_中國大陸 China": 4043686,
+      "total_日本 Japan": 4911681,
+      "total_香港 Hong Kong": 1676374,
+      "growth_rate_中國大陸 China": -3.092,
+      "growth_rate_日本 Japan": 1.7765,
+      "growth_rate_香港 Hong Kong": -1.1726
+    },
+    {
+      "年別": 2020,
+      "total_中國大陸 China": 414634,
+      "total_日本 Japan": 697981,
+      "total_香港 Hong Kong": 158008,
+      "growth_rate_中國大陸 China": -89.7461,
+      "growth_rate_日本 Japan": -85.7894,
+      "growth_rate_香港 Hong Kong": -90.5744
+    },
+    {
+      "年別": 2021,
+      "total_中國大陸 China": 128637,
+      "total_日本 Japan": 14049,
+      "total_香港 Hong Kong": 12692,
+      "growth_rate_中國大陸 China": -68.9758,
+      "growth_rate_日本 Japan": -97.9872,
+      "growth_rate_香港 Hong Kong": -91.9675
+    },
+    {
+      "年別": 2022,
+      "total_中國大陸 China": 165895,
+      "total_日本 Japan": 354219,
+      "total_香港 Hong Kong": 52725,
+      "growth_rate_中國大陸 China": 28.9637,
+      "growth_rate_日本 Japan": 2421.3111,
+      "growth_rate_香港 Hong Kong": 315.4192
+    },
+    {
+      "年別": 2023,
+      "total_中國大陸 China": 1761134,
+      "total_日本 Japan": 4225804,
+      "total_香港 Hong Kong": 743443,
+      "growth_rate_中國大陸 China": 961.5956,
+      "growth_rate_日本 Japan": 1092.9919,
+      "growth_rate_香港 Hong Kong": 1310.0389
+    },
+    {
+      "年別": 2024,
+      "total_中國大陸 China": 2770284,
+      "total_日本 Japan": 6006116,
+      "total_香港 Hong Kong": 1203821,
+      "growth_rate_中國大陸 China": 57.3011,
+      "growth_rate_日本 Japan": 42.1295,
+      "growth_rate_香港 Hong Kong": 61.9251
+    }
+  ]
+}
